@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+
+# Ren'Py
+game/python-packages/
+lib/
+renpy/
+*.rpa
+*.rpyb
+*.rpyc
+*.save
+*.tab
+log.txt
+errors.txt
+traceback.txt
+persistent
+screenshot*.png
+
+# Doki Doki Literature Club
+characters/
+DDLC Fan Pack/
+DDLC.*
+CAN YOU HEAR ME.txt
+firstrun
+have a nice weekend!
+hxppy thxughts.png
+iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.txt
+README.html
+
+# VSCode
+.history
+.vscode
