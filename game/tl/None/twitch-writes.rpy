@@ -1,3 +1,21 @@
+# Extend screen navigation
+init -10 python hide:
+    screens = [s for s in renpy.game.script.namemap.values() if isinstance(s, renpy.ast.Screen)]
+    tw_screen = (s for s in screens if s.screen.name == "twitch_writes_menu_button").next()
+    tw_button = tw_screen.screen.children[0]
+
+    for navigation in (s for s in screens if s.screen.name == "navigation"):
+        vbox = navigation.screen.children[0]
+        in_if_not_autoload = vbox.children[0].entries[0][1]
+        # Insert the statements of twitch_writes_menu_button after "Load Game"
+        in_if_not_autoload.children.insert(2, tw_button)
+
+screen twitch_writes_menu_button:
+    # textbutton _("Load Game")
+    if main_menu:
+        textbutton _("Twitch Writes") action Start("twitch_writes")
+    # if _in_replay:
+
 label twitch_writes:
     $ quick_menu = True
 
