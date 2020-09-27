@@ -28,7 +28,7 @@ init 10 python hide:
                 says = [s for s in node.block if isinstance(s, renpy.ast.Say)]
                 # Add affix if the character's dialogue, not the narration.
                 affix = '"' if (s.who != None for s in says).next() else ""
-                new = "\n".join(affix + s.what + affix for s in says)
+                new = "\n".join([affix + s.what + affix for s in says])
                 en_strings.add(old, new, (node.filename, node.linenumber))
 
         jp_strings = renpy.game.script.translator.strings["Japanese"]
