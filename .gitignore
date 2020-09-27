@@ -13,6 +13,7 @@ renpy/
 log.txt
 errors.txt
 traceback.txt
+project.json
 persistent
 screenshot*.png
 
@@ -30,3 +31,6 @@ README.html
 # VSCode
 .history
 .vscode
+
+# ddlc-3rd-anniv-twitch-writes
+README.txt

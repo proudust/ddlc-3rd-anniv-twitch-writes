@@ -1,0 +1,8 @@
+{
+    "name": "DDLC 3rd-anniversary Twitch Writes",
+    "description": "An unofficial mod that reproduces the contents of the project \"Twitch Writes\" held in the 3rd-anniversary stream.",
+    "author": "DDLC translate club jp (DDLC翻訳部)",
+    "uses_sdk": false,
+    "discord": "9U9QCN2",
+    "website": "https://github.com/proudust/ddlc-3rd-anniv-twitch-writes"
+}
