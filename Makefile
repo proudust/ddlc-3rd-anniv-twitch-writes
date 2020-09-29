@@ -1,5 +1,7 @@
-BUILD_NAME := $(subst $() ,_,$(shell grep -oP '(?<=define build.name = ").+(?=")' ./game/options.rpy))
+BUILD_NAME := $(subst $() ,_,$(shell grep -oP '(?<=define build.name = ").+(?=")' game/options.rpy))
 VERSION := $(shell git describe --tags)
+ARTIFACT_NAME := $(BUILD_NAME)-$(VERSION).zip
+ARTIFACT_PATH := dists/$(ARTIFACT_NAME)
 
 RENPY := SDL_AUDIODRIVER=dummy sdk/renpy.sh
 DDLC_FILES := game/audio.rpa game/fonts.rpa game/images.rpa game/scripts.rpa game/python-packages/singleton.py
@@ -12,14 +14,16 @@ sdk:
 $(DDLC_FILES):
 	@./tools/install-ddlc.sh
 
-run: sdk ## Run game
+run-linux: sdk $(DDLC_FILES) ## Run game on Linux version
 	@$(RENPY) .
+run-windows: sdk $(DDLC_FILES) ## Run game on Windows version
+	@./DDLC.exe
 
 build: dists/$(BUILD_NAME)-$(VERSION).zip ## Build and package mods (Default)
-dists/$(BUILD_NAME)-$(VERSION).zip: install
+$(ARTIFACT_PATH): install
 	@$(RENPY) sdk/launcher distribute . --package "$(VERSION)"
-	@echo '::set-env name=ARTIFACT_NAME::$(BUILD_NAME)-$(VERSION).zip'
-	@echo '::set-env name=ARTIFACT_PATH::dists/$(BUILD_NAME)-$(VERSION).zip'
+	@echo '::set-env name=ARTIFACT_NAME::$(ARTIFACT_NAME)'
+	@echo '::set-env name=ARTIFACT_PATH::$(ARTIFACT_PATH)'
 	@echo '::set-env name=BUILD_NAME::$(BUILD_NAME)'
 	@echo '::set-env name=VERSION::$(VERSION)'
 
@@ -45,7 +49,8 @@ help:
 .PHONY: \
 	all \
 	install \
-	run \
+	run-linux \
+	run-windows \
 	build \
 	dialogue \
 	check \
