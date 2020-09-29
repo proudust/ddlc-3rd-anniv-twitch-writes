@@ -33,4 +33,6 @@ README.html
 .vscode
 
 # ddlc-3rd-anniv-twitch-writes
+dists/
+sdk/
 README.txt

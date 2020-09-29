@@ -1,21 +1,23 @@
 define build.name = "Twitch Writes Mod"
 define build.destination = "dists"
 define build.directory_name = build.name.replace(" ", "_")
+define config.version = "unknown"
 
 define config.developer = True
 define config.layers = [ "master", "transient", "screens", "overlay", "front" ]
 
 init python hide:
     # Run git describe
+    version = config.version
     try:
         import subprocess
-        describe = subprocess.check_output(["git", "-C", config.basedir, "describe", "--tags"], shell=True)
+        describe = subprocess.check_output(["git", "describe", "--tags"], cwd=config.basedir)
         config.version = str(describe[1:-1])
+        version = "v" + config.version
     except subprocess.CalledProcessError:
         pass
 
-    package_name = ("v" + config.version) if config.version != "" else "unknown"
-    build.package("v" + config.version, "zip", build.name, description="DDLC Compatible Mod")
+    build.package(version, "zip", build.name, description="DDLC Compatible Mod")
 
     build.archive("twitch-writes", build.name)
     build.classify("game/tl/Japanese/twitch-writes.rpyc", "twitch-writes")
