@@ -17,7 +17,7 @@ def enumrable_tl_scripts():
 
 
 def read_tl_script(path):
-    pattern = r'translate \w+ ([^:]+):\s    ([^"]+?) "[^"]+"( nointeract)?'
+    pattern = r'translate \w+ (?!.*strings)([^:]+):\s    ([^"]+?) "[^"]+"( nointeract)?'
 
     with open(path, mode='r') as file:
         content = file.read()
@@ -47,7 +47,7 @@ def check_translate(dialogues, translates):
             errors.append(('Attrs unmatch', id, attrs))
             print(
                 '::warning file=' + path + ',line=' + str(line) +
-                '::Attrs unmatch (id: ' + id + ' attrs:' + attrs + ')'
+                '::Attrs unmatch (id: ' + id + ' attrs:' + find_attrs + ')'
             )
     return errors
 
