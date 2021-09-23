@@ -29,13 +29,13 @@ By installing it, you can add facial expressions such as animation to sprites an
 - [GitHub repository for this mod](https://github.com/proudust/ddlc-3rd-anniv-twitch-writes)
 - [DDLC 3rd-anniversary Twitch Writes 日本語化 作業所](https://docs.google.com/spreadsheets/d/19psxU9KV2Q7gerIQXA-bHePlt-ZdLpZwhTAoYT1l1CU/edit?usp=sharing)
 
-- [DDLC 3rd-anniversary stream](https://www.twitch.tv/videos/749086292)
-  - [00:00:00 Welcome!](https://www.twitch.tv/videos/749086292?t=0s)
-  - [00:27:50 Portal Commentary](https://www.twitch.tv/videos/749086292?t=0h27m50s)
-  - [01:27:10 Office Tour!](https://www.twitch.tv/videos/749086292?t=1h27m10s)
-  - [02:15:20 Twitch Writes](https://www.twitch.tv/videos/749086292?t=2h15m20s)
-  - [03:45:35 Klaeia Draws DDLC](https://www.twitch.tv/videos/749086292?t=3h45m35s)
-  - [05:19:46 Chat w/ Trihex](https://www.twitch.tv/videos/749086292?t=5h19m46s)
-  - [06:39:28 Chillin](https://www.twitch.tv/videos/749086292?t=6h39m28s)
+- [DDLC 3rd-anniversary stream](https://www.twitch.tv/videos/751152139)
+  - [00:00:00 Welcome!](https://www.twitch.tv/videos/751152139?t=0s)
+  - [00:27:50 Portal Commentary](https://www.twitch.tv/videos/751152139?t=0h27m50s)
+  - [01:27:10 Office Tour!](https://www.twitch.tv/videos/751152139?t=1h27m10s)
+  - [02:15:20 Twitch Writes](https://www.twitch.tv/videos/751152139?t=2h15m20s)
+  - [03:45:35 Klaeia Draws DDLC](https://www.twitch.tv/videos/751152139?t=3h45m35s)
+  - [05:19:46 Chat w/ Trihex](https://www.twitch.tv/videos/751152139?t=5h19m46s)
+  - [06:39:28 Chillin](https://www.twitch.tv/videos/751152139?t=6h39m28s)
 
 - [Twitch Writes 日本語訳動画](https://youtu.be/-gfB3sthzNk) ※本 MOD とは別訳
